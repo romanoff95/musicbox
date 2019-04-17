@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "musicbox", "musicbox\musicbox.csproj", "{AC4D39DA-A78A-41EE-9CC9-DA2DF0A70480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAssembly", "ServerAssembly\ServerAssembly.csproj", "{9EC456EB-7485-4E79-AB1B-27CA203416FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteServerHost", "RemoteServerHost\RemoteServerHost.csproj", "{414EA87D-54A7-42E7-95E5-766B9EAF6DAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{1623B9AA-C1D4-4790-97B9-56BDA9135460}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC4D39DA-A78A-41EE-9CC9-DA2DF0A70480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC4D39DA-A78A-41EE-9CC9-DA2DF0A70480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC4D39DA-A78A-41EE-9CC9-DA2DF0A70480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC4D39DA-A78A-41EE-9CC9-DA2DF0A70480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC456EB-7485-4E79-AB1B-27CA203416FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC456EB-7485-4E79-AB1B-27CA203416FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC456EB-7485-4E79-AB1B-27CA203416FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414EA87D-54A7-42E7-95E5-766B9EAF6DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414EA87D-54A7-42E7-95E5-766B9EAF6DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414EA87D-54A7-42E7-95E5-766B9EAF6DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1623B9AA-C1D4-4790-97B9-56BDA9135460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1623B9AA-C1D4-4790-97B9-56BDA9135460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1623B9AA-C1D4-4790-97B9-56BDA9135460}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

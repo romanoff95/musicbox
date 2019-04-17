@@ -1,0 +1,486 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC4D39DA-A78A-41EE-9CC9-DA2DF0A70480}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>musicbox</RootNamespace>
+    <AssemblyName>musicbox</AssemblyName>
+    <TargetZone>
+    </TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;FULL,WW</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DirectShowLib-2005, Version=2.0.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\tmp\csharp_components\DirectShowLibV2-0\lib\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Sanford.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Midi, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Sanford.Multimedia.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMessageBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppMessageBase.Designer.cs">
+      <DependentUpon>AppMessageBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppMessageYesNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppMessageYesNo.Designer.cs">
+      <DependentUpon>AppMessageYesNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CbInfo.cs" />
+    <Compile Include="Ccnet.cs" />
+    <Compile Include="CCNetConst.cs" />
+    <Compile Include="InternetLinkManager.cs" />
+    <Compile Include="ItemInfo.cs" />
+    <Compile Include="Kar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\Artist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\ExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\ExceptionForm.Designer.cs">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\LastOrdered.cs" />
+    <Compile Include="Main\Player.cs" />
+    <Compile Include="Main\PlayManager.cs" />
+    <Compile Include="Main\PlayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\PriceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\SelectedMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\SelectingMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\TopTen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Media.cs" />
+    <Compile Include="MediaInspector.cs" />
+    <Compile Include="MediaItemsSettings.cs" />
+    <Compile Include="MenuSettings.cs" />
+    <Compile Include="Menu\DemoManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\DemoManageForm.Designer.cs">
+      <DependentUpon>DemoManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MenuPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuPass.Designer.cs">
+      <DependentUpon>MenuPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MenuPriceTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuUsersTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuVolumeTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\UserPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\UserPassword.Designer.cs">
+      <DependentUpon>UserPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\UserPermisson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\UserPermisson.Designer.cs">
+      <DependentUpon>UserPermisson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayItem.cs" />
+    <Compile Include="Menu\DemoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\DemoSelect.Designer.cs">
+      <DependentUpon>DemoSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MainWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MainWnd.Designer.cs">
+      <DependentUpon>MainWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppMessageBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AppMessageBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppMessageYesNo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AppMessageYesNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\ExceptionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\DemoManageForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DemoManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MenuPass.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MenuPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\UserPassword.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\UserPermisson.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserPermisson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\DemoSelect.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DemoSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MainWnd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Menu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\SearchForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\SelectForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\HeaderCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HeaderCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sett\SettForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoWnd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VideoWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RasManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScreenSaverManager.cs" />
+    <Compile Include="Search\Search.cs" />
+    <Compile Include="Search\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select\AdditionalElements.cs">
+    </Compile>
+    <Compile Include="Main\SelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\SelectForm.Designer.cs">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\HeaderCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\HeaderCtrl.Designer.cs">
+      <DependentUpon>HeaderCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Sett\SettCtx.cs" />
+    <Compile Include="Sett\SettForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sett\SettForm.Designer.cs">
+      <DependentUpon>SettForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillValidatorManager.cs" />
+    <Compile Include="VideoWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoWnd.Designer.cs">
+      <DependentUpon>VideoWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="win32com.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page1_6_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_9_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_1_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_11_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_29_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_30_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_13_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_35_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_37.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_37_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_33_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unknown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_3_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_4_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_5_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_6_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2_7_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page1_3_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page1_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page1_8_Press.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page1_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jumper_Red.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page_klava_01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page_klava_02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page_klava_03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garden.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page1_10_lite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cena_zakaza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page1_10_br.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Resources\message2.bmp" />
+    <None Include="Resources\cena_zakaza_ex.jpg" />
+    <None Include="Resources\karaoke.bmp" />
+    <None Include="Resources\folderopen.ico" />
+    <None Include="Resources\Page1_1.jpg" />
+    <None Include="Resources\background-gallery.jpg" />
+    <None Include="Resources\Page2_12_2.jpg" />
+    <None Include="Resources\Page2_281.jpg" />
+    <None Include="Resources\Page1_4_Part2.jpg" />
+    <None Include="Resources\message2ex.bmp" />
+    <None Include="Resources\message2ex1.bmp" />
+    <None Include="Resources\message2ex2.bmp" />
+    <None Include="Resources\message2ex.jpg" />
+    <None Include="Resources\message2.jpg" />
+    <None Include="Resources\video.jpg" />
+    <None Include="Resources\audio.jpg" />
+    <None Include="Resources\karaoke.jpg" />
+    <Content Include="top.swf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

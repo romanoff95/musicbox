@@ -1,0 +1,62 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="musicbox.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RootPath" Description="Путь до папки с медиа" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\root\music</Value>
+    </Setting>
+    <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\data.mdb&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\data.mdb</Value>
+    </Setting>
+    <Setting Name="DeviceNum" Description="Сетевой код(название) аппарата" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="DeviceKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">31338</Value>
+    </Setting>
+    <Setting Name="OrderedSongPage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/erv/song.php</Value>
+    </Setting>
+    <Setting Name="ServerAddr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://service.meloman-net.ru</Value>
+    </Setting>
+    <Setting Name="LinkPage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/erv/link.php</Value>
+    </Setting>
+    <Setting Name="IncasPage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/erv/incas.php</Value>
+    </Setting>
+    <Setting Name="SendDataIntervalSec" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="SeralPortNumber" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SendDataToInternet" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ManageInternetConnectionState" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CheckInternetConnectionIntervalSec" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="ConnectionName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BluetoothConnection</Value>
+    </Setting>
+    <Setting Name="UseBillValidator" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MoneylessModeEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MenuShowDelaySec" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
